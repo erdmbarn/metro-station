@@ -1,0 +1,67 @@
+
+*** Running vivado
+    with args -log led.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source led.tcl -notrace
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source led.tcl -notrace
+Command: link_design -top led -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 860.852 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/baris/metro/metro.srcs/constrs_1/new/basys3.xdc]
+Finished Parsing XDC File [C:/Users/baris/metro/metro.srcs/constrs_1/new/basys3.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 980.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[0] has multiple drivers: led_reg[0]/Q, and led_reg[0]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[10] has multiple drivers: led_reg[10]/Q, and led_reg[10]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[11] has multiple drivers: led_reg[11]__0/Q, and led_reg[11]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[12] has multiple drivers: led_reg[12]/Q, and led_reg[12]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[13] has multiple drivers: led_reg[13]__0/Q, and led_reg[13]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[14] has multiple drivers: led_reg[14]/Q, and led_reg[14]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[15] has multiple drivers: led_reg[15]__0/Q, and led_reg[15]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[1] has multiple drivers: led_reg[1]__0/Q, and led_reg[1]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[2] has multiple drivers: led_reg[2]/Q, and led_reg[2]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[3] has multiple drivers: led_reg[3]/Q, and led_reg[3]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[4] has multiple drivers: led_reg[4]__0/Q, and led_reg[4]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[5] has multiple drivers: led_reg[5]__0/Q, and led_reg[5]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[6] has multiple drivers: led_reg[6]/Q, and led_reg[6]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[7] has multiple drivers: led_reg[7]/Q, and led_reg[7]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[8] has multiple drivers: led_reg[8]__0/Q, and led_reg[8]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net led_OBUF[9] has multiple drivers: led_reg[9]/Q, and led_reg[9]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net yon has multiple drivers: yon_reg__0/Q, and yon_reg/Q.
+INFO: [Project 1-461] DRC finished with 17 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.512 . Memory (MB): peak = 1007.020 ; gain = 22.242
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 18 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  2 00:44:14 2023...
